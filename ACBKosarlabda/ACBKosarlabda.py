@@ -43,7 +43,7 @@ eredmenyek = {}
 print("6. feladat")
 for x in lista:
     if x.Idopont ==dt.datetime(2004,11,21):
-        eredmenyek[x.Hazai]=eredmenyek.get(x.Hazai, [0+x.HazaiPont,0+x.IdegenPont])
+        eredmenyek[f"{x.Hazai}-{x.Idegen}"]=eredmenyek.get(f"{x.Hazai}-{x.Idegen}", [0+x.HazaiPont,0+x.IdegenPont])
 
 for x, y in eredmenyek.items():
     print(f"\t{x}: ({y[0]}:{y[1]})")
